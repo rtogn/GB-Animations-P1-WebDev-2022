@@ -1,0 +1,66 @@
+#logo {
+    position: relative;
+    right: 40%;
+    bottom: 50%;
+}
+
+#versionText {
+    position: relative;
+    bottom: 50%;
+    right: 15%;
+    word-spacing: 10px;
+    color: darkred;
+}
+
+#trainer {
+    position: relative;
+    left: 10%;
+    bottom:43%;
+    transform: scale(2,2);
+    z-index: 2;
+}
+
+#copyright {
+    position: relative;
+    right: 35%;
+    bottom: 43%;
+}
+
+.pogey {
+    position: relative;
+    right: 22%;
+    bottom: 42%;
+    transform: scale(2,2);
+    z-index: 1;
+    
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    0% {right: -45%}
+    40% {right: 22%}
+    90% {right: 22%}
+    100% {right: 87%}
+    
+}
+
+.box {
+    position: fixed;
+    background-color: black;
+    bottom: 25%;
+    height: 200px;
+    width: 100px;
+    z-index: 5;
+}
+
+#boxL {
+    position: fixed;
+    left: 22.2%;
+}
+
+#boxR {
+    position: fixed;
+    left: 61.3%;
+}

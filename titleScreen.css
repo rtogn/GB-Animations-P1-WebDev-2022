@@ -2,14 +2,35 @@
     position: relative;
     right: 40%;
     bottom: 50%;
+    
+    animation-name: titleScroll;
+    animation-duration: 3.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes titleScroll {
+    0% {bottom: 100%}
+    5% {bottom: 50%}
+    8% {bottom: 55%}
+    10%{bottom: 50%}
 }
 
 #versionText {
     position: relative;
     bottom: 50%;
-    right: 15%;
+    right: 19%;
     word-spacing: 10px;
     color: darkred;
+    font-size: 12pt;
+    animation-name: textSnap;
+    animation-duration: 3.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes textSnap { 
+    0% {right: -60%}
+    10% {right: -60%}
+    20%{right: 19%}
 }
 
 #trainer {
@@ -17,31 +38,59 @@
     left: 10%;
     bottom:43%;
     transform: scale(2,2);
-    z-index: 2;
+    z-index: 3;
 }
+
+#ball {
+    position: relative;
+    left:9.5%;
+    bottom:52%;
+    transform: scale(2,2);
+    z-index: 2;
+    
+    animation-name: throw;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes throw {
+    0% {bottom: 52%}
+    23% {bottom: 52%}
+    24% {bottom: 58%} 
+    24.8% {bottom: 52%}
+    100%{bottom: 52%}
+}
+
 
 #copyright {
     position: relative;
-    right: 35%;
-    bottom: 43%;
+    right: 48%;
+    bottom: 42%;
+    font-size: 14pt;
+    letter-spacing: -2px;
+    word-spacing: -2px;
+}
+
+#spaceFix {
+    letter-spacing: -6px;
 }
 
 .pogey {
     position: relative;
     right: 22%;
-    bottom: 42%;
+    bottom: 41%;
     transform: scale(2,2);
     z-index: 1;
     
     animation-name: move;
-    animation-duration: 3s;
+    animation-duration: 4.5s;
     animation-iteration-count: infinite;
 }
 
 @keyframes move {
     0% {right: -45%}
-    40% {right: 22%}
-    90% {right: 22%}
+    25% {right: 18%}
+    90% {right: 18%}
     100% {right: 87%}
     
 }
@@ -50,17 +99,18 @@
     position: fixed;
     background-color: black;
     bottom: 25%;
-    height: 200px;
-    width: 100px;
-    z-index: 5;
+    height: 400px;  
+    z-index: 4;
 }
 
 #boxL {
     position: fixed;
-    left: 22.2%;
+    left: 21.2%;
+     width: 113px;
 }
 
 #boxR {
     position: fixed;
-    left: 61.3%;
+    left: 61.2%;
+     width: 400px;
 }

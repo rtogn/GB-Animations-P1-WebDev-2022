@@ -193,16 +193,16 @@
 .box {
     position: fixed;
     background-color: black;
-    bottom: 25%;
+    bottom: 10%;
     height: 400px;  
     z-index: 4;
 }
 
 #boxL {
     position: fixed;
-    left: 21.2%;
-     width: 113px;
-        opacity: 1;
+    left: 18.3%;
+    width: 150px;
+    opacity: 1;
 }
 
 #boxR {

@@ -1,3 +1,9 @@
+/* Animation for the large POKEMON banner on the page.
+ * At start of page logo will drop down from the top with a quick bounce effect.
+ * On hoover will fade in/out a colorized version of the image.
+ * This is accomplished with a separate .png that is positioned over the original
+ * but starts with an opacity of 0.
+ */
 #logo {
     position: relative;
     right: 40%;
@@ -36,6 +42,10 @@
     100% {opacity: 0%}
 }
 
+/* The text "CSS VERSION" will slide in from the right at startup
+ * This uses the font family "Early Gameboy" by Jimmy Campbell.
+ * https://www.dafont.com/early-gameboy.font
+ */
 #versionText {
     position: relative;
     bottom: 50%;
@@ -54,6 +64,10 @@
     20%{right: 19%}
 }
 
+/* Static image of trainer character.
+ * Note that z-index is higher than the monsters
+ * that scroll behind and the tossed ball.
+ */
 #trainer {
     position: relative;
     left: 10%;
@@ -62,6 +76,13 @@
     z-index: 3;
 }
 
+/* Ball cycles on an 18s loop in sync with the 
+ * scoll animation for the different pokemon.
+ * The ball will pop up at the start of each loop in a
+ * quick animation and wait for the remainder of the time.
+ * This was timed to match the game which pops the ball
+ * every 4-5 transitions or ~18 seconds. 
+ */
 #ball {
     position: relative;
     left:9.5%;
@@ -82,7 +103,11 @@
     100%{bottom: 52%}
 }
 
-
+/* Copyright text to gamefreak lays at the bottom of the screen.
+ * It has no animation, but the monospace font used needed some 
+ * adjustment to fix the letter spacing so that it fits on screen.
+ * It is not 100% accurate to the oirginal, but is close enough.
+ */
 #copyright {
     position: relative;
     right: 48%;
@@ -118,41 +143,42 @@
 }
 */
 
+
+/* The pokemon slide loop is managed with 4 instances
+ * of the same animation set to different timings over 18 seconds.
+ * This is why all have the same time and iteration, but are set to move1-4 animations.
+ * Each takes 4.5 seconds and starts off the border of the screen on the left.
+ * Until the loop ends they will sit beyond the border on the right and wait
+ * for the other monsters to complete their runs. Then the loop resets from
+ * the start. 
+ * In the HTML the image used can be swapped out to a different image which
+ * is how the 'evolution' effect is created on clicking the trainer. The pngs 
+ * referenced are simply swapped on the same skeleton html. 
+ */
 .pogey {
     position: absolute;
     right: 22%;
     bottom: 74%;
     transform: scale(2,2);
     z-index:0;
-
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
 }
 
-.firstPogey {
-        
+.firstPogey {    
     animation-name: move1;
-    animation-duration: 18s;
-    animation-iteration-count: infinite;
 }
 
-.secondPogey {
-        
+.secondPogey {    
     animation-name: move2;
-    animation-duration: 18s;
-    animation-iteration-count: infinite;
 }
 
-.thirdPogey {
-        
+.thirdPogey {     
     animation-name: move3;
-    animation-duration: 18s;
-    animation-iteration-count: infinite;
 }
 
-.fourthPogey {
-        
+.fourthPogey {       
     animation-name: move4;
-    animation-duration: 18s;
-    animation-iteration-count: infinite;
 }
 
 @keyframes move1 {
@@ -189,10 +215,15 @@
     100% {right: 160%} 
 }
 
-
+/* Black boxes used to hide the stack of images on the 
+ * left and right side of the screen. 
+ * Set opacity to 0 to view how animations work, or set
+ * color to red to view where the boxes sit. 
+ */
 .box {
     position: fixed;
     background-color: black;
+    opacity: 1;
     bottom: 10%;
     height: 400px;  
     z-index: 4;
@@ -201,13 +232,11 @@
 #boxL {
     position: fixed;
     left: 18.3%;
-    width: 150px;
-    opacity: 1;
+    width: 150px;    
 }
 
 #boxR {
     position: fixed;
     left: 61.2%;
      width: 400px;
-    opacity: 1;
 }

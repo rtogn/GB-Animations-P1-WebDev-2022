@@ -1,11 +1,18 @@
-
+ 
+ /* This project uses the font family "Early Gameboy" by Jimmy Campbell.
+ * https://www.dafont.com/early-gameboy.font 
+ */
  @font-face { font-family: GameBoy; src: url('font/GameBoy.ttf'); } 
 
 #background {
    background-color: black; 
 }
 
-
+/* Set up for basic Gameboy screen in the middle of the webpage with a
+ * #e8e8e8 color. Sprites should have transp. backgrounds so this can
+ * easily be changed on a whim. 
+ * This style shoudl be applied to all pages in the set for consistency. 
+ */
 #screen {
     position: fixed;
 
@@ -25,7 +32,7 @@
     
 }
 
-
+/* Minor adjustment for size of audio controll box. */
 audio {
     width: 270px;
 }    

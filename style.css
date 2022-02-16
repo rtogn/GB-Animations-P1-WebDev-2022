@@ -1,5 +1,5 @@
 
- @font-face { font-family: GameBoy; src: url('GameBoy.ttf'); } 
+ @font-face { font-family: GameBoy; src: url('font/GameBoy.ttf'); } 
 
 #background {
    background-color: black; 

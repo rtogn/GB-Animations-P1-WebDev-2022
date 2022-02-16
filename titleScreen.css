@@ -15,13 +15,6 @@
     10%{bottom: 50%}
 }
 
-#grayLogo {
-    opacity: 1;
-}
-
-#grayLogo:hover {
-    opacity: 0;
-}
 
 #colorLogo {
     position: absolute;
@@ -103,6 +96,7 @@
     letter-spacing: -6px;
 }
 
+/*
 .pogey {
     position: relative;
     right: 22%;
@@ -112,16 +106,89 @@
     
     animation-name: move;
     animation-duration: 4.5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
 
 @keyframes move {
+    
     0% {right: -45%}
     25% {right: 18%}
     90% {right: 18%}
-    100% {right: 87%}
-    
+    100% {right: 87%}  
 }
+*/
+
+.pogey {
+    position: absolute;
+    right: 22%;
+    bottom: 74%;
+    transform: scale(2,2);
+    z-index:0;
+
+}
+
+.firstPogey {
+        
+    animation-name: move1;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+.secondPogey {
+        
+    animation-name: move2;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+.thirdPogey {
+        
+    animation-name: move3;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+.fourthPogey {
+        
+    animation-name: move4;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move1 {
+    0% {right: 27%}
+    6.25% {right: 92%}
+    22.5% {right: 92%}
+    25% {right: 160%}
+    100% {right:160%}
+}
+
+@keyframes move2 {
+    0% {right: 27%}
+    25% {right:27%}
+    31.25% {right: 92%}
+    47.25% {right: 92%}
+    50% {right: 160%}
+    100% {right:160%}
+}
+
+@keyframes move3 {
+    0% {right: 27%}
+    50% {right: 27%}
+    56.25% {right: 92%}
+    72.5% {right: 92%}
+    75% {right: 160%}
+    100% {right:160%}
+}
+
+@keyframes move4 {
+    0% {right: 27%}
+    75% {right: 27%}
+    81.25% {right: 92%}
+    97.5% {right: 92%}
+    100% {right: 160%} 
+}
+
 
 .box {
     position: fixed;
@@ -135,10 +202,12 @@
     position: fixed;
     left: 21.2%;
      width: 113px;
+        opacity: 1;
 }
 
 #boxR {
     position: fixed;
     left: 61.2%;
      width: 400px;
+    opacity: 1;
 }

@@ -1,7 +1,11 @@
+#screen {
+    transition: opacity 1s;
+}
 .gengar{
     position:absolute;
     bottom:-61px;
     transform: scale(0.5,0.5);
+    transition: opacity 1s;
 }
 #gengarup {
     opacity: 0;
@@ -70,4 +74,14 @@
         opacity: 1;
     }
     
+}
+#fade:hover + #screen .gengar{
+    opacity: 0;
+}
+body {
+    font-family: Gameboy, arial;
+}
+#fade {
+    text-align: center;
+    margin: auto;
 }

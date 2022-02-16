@@ -73,6 +73,14 @@
     z-index: 3;
 }
 
+#gameboy {
+    position: absolute;
+    right: 23%;
+    bottom: 10%;
+    transform: scale(1.4,1.27);
+    z-index: 2;
+}
+
 /* Ball cycles on an 18s loop in sync with the 
  * scoll animation for the different pokemon.
  * The ball will pop up at the start of each loop in a

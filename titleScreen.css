@@ -42,10 +42,7 @@
     100% {opacity: 0%}
 }
 
-/* The text "CSS VERSION" will slide in from the right at startup
- * This uses the font family "Early Gameboy" by Jimmy Campbell.
- * https://www.dafont.com/early-gameboy.font
- */
+/* The text "CSS VERSION" will slide in from the right at startup from off screen */
 #versionText {
     position: relative;
     bottom: 50%;

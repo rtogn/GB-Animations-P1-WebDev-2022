@@ -15,6 +15,34 @@
     10%{bottom: 50%}
 }
 
+#grayLogo {
+    opacity: 1;
+}
+
+#grayLogo:hover {
+    opacity: 0;
+}
+
+#colorLogo {
+    position: absolute;
+    right: 42%;
+    bottom: 25.9%;  
+    transform: scale(2.5,2.5);
+    opacity: 0;
+}
+
+#colorLogo:hover {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0%}
+    50% {opacity: 100%}
+    100% {opacity: 0%}
+}
+
 #versionText {
     position: relative;
     bottom: 50%;

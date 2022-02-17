@@ -28,6 +28,7 @@
     bottom: 25.9%;  
     transform: scale(2.5,2.5);
     opacity: 0;
+    z-index: 5;
 }
 
 #colorLogo:hover {
@@ -220,6 +221,7 @@
     100% {right: 160%} 
 }
 
+
 /* Black boxes used to hide the stack of images on the 
  * left and right side of the screen. 
  * Set opacity to 0 to view how animations work, or set
@@ -227,11 +229,11 @@
  */
 .box {
     position: fixed;
-    background-color: black;
+    background-color: red;
     opacity: 1;
     bottom: 10%;
     height: 400px;  
-    z-index: 4;
+    z-index: 2;
 }
 
 #boxL {

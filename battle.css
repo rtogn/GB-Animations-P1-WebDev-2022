@@ -120,33 +120,43 @@ body {
     animation-name: hit;
     animation-duration: 2s;
     animation-iteration-count: 1;
+    animation-delay: 1s;
 }
 
 @keyframes hit {
-    49% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 0;}
+    0% {opacity: 0;}
+    74% {opacity: 0;}
+    75% {
+        opacity: 1;
+        transform: translate(100px, 0px) scale(0.5,0.5);
+    }
+    100% {transform: translate(0px, 0px) scale(0.5,0.5);}
 }
 
 #gengar:hover + #nido #nidoflinch {
     animation-name: flinch;
     animation-duration: 2s;
     animation-iteration-count: 1;
+    animation-delay: 1s;
 }
 
 @keyframes flinch {
-    49% {opacity: 0;}
-    50% {
+    0% {
         opacity: 1;
         transform: translate(0, 0px) scale(0.5,0.5);
     }
-    75% {
+    25% {
         opacity: 1;
 
         transform: translate(50px, -50px) scale(0.5,0.5);
     }
-    100% {
+    50% {
         opacity: 1;
-        transform: translate(100px, 0px) scale(0.5,0.5);
+        transform: translate(100px, 8px) scale(0.5,0.5);
     }
+    74% {
+        opacity: 1;
+        transform: translate(100px, 8px) scale(0.5,0.5);
+    }
+    75% {opacity: 0;}
 }

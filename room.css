@@ -1,0 +1,32 @@
+
+#room {
+    position: absolute;
+    transform: scale(.5,.5);
+    top:-262%;
+    left:-213%; /*up right*/
+    
+    z-index:0;
+    animation-timing-function: linear;
+    animation-name: scroll;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% {top:-262%}
+    10% {top:-262%}
+    50% {top:-188% }
+    100% {top: -262%}
+
+}
+
+#trainer {
+    position: relative;
+    transform: scale(2.8,2.8);
+    top:-10%;
+    left:-10%;
+    z-index: 5;
+}
+/*
+
+*/

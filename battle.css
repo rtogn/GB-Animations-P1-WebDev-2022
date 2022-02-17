@@ -4,7 +4,7 @@
     left: 0;
     transform: scale(0.5,0.5);
     transition: opacity 1s;
-    z-index: 2;
+    z-index: 1;
 }
 #gengarup {
     opacity: 0;
@@ -74,7 +74,7 @@
     }
     
 }
-#link:hover + #gengar .gengar, #link:hover ~ #nido .nidorino {
+#logoR:hover + #gengar .gengar, #logoR:hover ~ #nido .nidorino {
     opacity: 0;
 }
 body {
@@ -82,13 +82,15 @@ body {
 }
 
 #logoR {
-    position: relative;
+    position: absolute;
     width: 50%;
     left: 25%;
     top: 40%;
     animation-name: down;
     animation-duration: 5s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 1;
 }
 
 @keyframes down {
@@ -102,10 +104,13 @@ body {
     left: 150px;
     transform: scale(0.5,0.5);
     transition: opacity 1s;
+    z-index: 0;
 }
+
 
 #basenidorino {
     opacity: 1;
+
 }
 
 #nidojump {
@@ -206,5 +211,27 @@ body {
     100% {
         transform: translate(10px, 0px) scale(0.5,0.5);
         opacity: 1;
+    }
+}
+div#block {
+    z-index: 2;
+    background-color: #e8e8e8;
+    height: 350px;
+    width: 400px;
+    left: 30%;
+}
+
+
+#logoR:active ~ #nido .nidorino, #logoR:active + #gengar .gengar, #logoR:active {
+    animation-name: screenswitch;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes screenswitch {
+    to {
+        z-index: -1;
+        opacity: 0;
     }
 }

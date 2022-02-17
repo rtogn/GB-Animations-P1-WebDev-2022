@@ -2,31 +2,91 @@
 #room {
     position: absolute;
     transform: scale(.5,.5);
-    top:-262%;
+    top:-188%;
     left:-213%; /*up right*/
     
     z-index:0;
     animation-timing-function: linear;
     animation-name: scroll;
-    animation-duration: 3.5s;
+    animation-duration: 5.5s;
     animation-iteration-count: infinite;
 }
 
 @keyframes scroll {
-    0% {top:-262%}
-    10% {top:-262%}
-    50% {top:-188% }
-    100% {top: -262%}
+    0% {top:-188%}
+    20% {top:-188%}
+    50% {top:-262% }
+    80% {top : -188%}
+    100% {top: -188%}
 
 }
 
 #trainer {
     position: relative;
     transform: scale(2.8,2.8);
-    top:-10%;
-    left:-10%;
+    top:-15%;
+    left:76.5%;
     z-index: 5;
 }
-/*
 
-*/
+
+#walkMid {
+    position: absolute;
+    opacity: 1;
+    animation-timing-function: linear;
+    animation-name: walkMid;
+    animation-duration: 1s;
+    animation-iteration-count: infinite
+}
+
+
+@keyframes walkMid {
+    20% {opacity: 1}
+    21% {opacity: 0}
+    39% {opacity: 0}
+    40% {opacity: 1}
+    59% {opacity: 1}
+    60% {opacity: 0}
+    79% {opacity: 0}
+    80% {opacity: 1}
+    100% {opacity: 1}
+}
+
+#walkDR {
+    position: absolute;
+    opacity: 0;
+    animation-timing-function: linear;
+    animation-name: walkDR;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes walkDR {
+    0% {opacity: 0}
+    20% {opacity: 0}
+    21% {opacity: 1}
+    39% {opacity: 1}
+    40% {opacity: 0}
+    100% {opacity: 0}
+}
+
+
+
+#walkDL {
+    position: absolute;
+    opacity: 0;
+    animation-timing-function: linear;
+    animation-name: walkDL;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes walkDL {
+    0% {opacity: 0}
+    59% {opacity: 0}
+    60% {opacity: 1}
+    79% {opacity: 1}
+    80% {opacity: 0}
+    100% {opacity: 0}
+}

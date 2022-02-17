@@ -4,6 +4,7 @@
     left: 0;
     transform: scale(0.5,0.5);
     transition: opacity 1s;
+    z-index: 2;
 }
 #gengarup {
     opacity: 0;
@@ -17,7 +18,7 @@
 #basegengar {
     opacity: 1;
 }
-#battle:hover #basegengar {
+#gengar:hover #basegengar {
     animation-name: change;
     animation-duration: 2s;
     animation-iteration-count: 1;
@@ -28,7 +29,7 @@
     100% {opacity: 0;}
 }
 
-#battle:hover #gengarup {
+#gengar:hover #gengarup {
     animation-name: windup;
     animation-duration: 2s;
     animation-iteration-count: 1;
@@ -45,7 +46,7 @@
     100% {opacity: 0;}
 }
 
-#battle:hover #gengardown{
+#gengar:hover #gengardown{
     animation-name: attack;
     animation-duration: 2s;
     animation-iteration-count: 1;
@@ -73,7 +74,7 @@
     }
     
 }
-#link:hover + #battle .gengar {
+#link:hover + #gengar .gengar, #link:hover ~ #nido .nidorino {
     opacity: 0;
 }
 body {
@@ -93,4 +94,59 @@ body {
 @keyframes down {
     from { top: -15%}
     to { top: 40%}
+}
+
+.nidorino {
+    position:absolute;
+    bottom:-56px;
+    left: 150px;
+    transform: scale(0.5,0.5);
+    transition: opacity 1s;
+}
+
+#basenidorino {
+    opacity: 1;
+}
+
+#nidojump {
+    opacity: 0;
+}
+
+#nidoflinch {
+    opacity: 0;
+}
+
+#gengar:hover + #nido #basenidorino {
+    animation-name: hit;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes hit {
+    49% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#gengar:hover + #nido #nidoflinch {
+    animation-name: flinch;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes flinch {
+    49% {opacity: 0;}
+    50% {
+        opacity: 1;
+        transform: translate(0, 0px) scale(0.5,0.5);
+    }
+    75% {
+        opacity: 1;
+
+        transform: translate(50px, -50px) scale(0.5,0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(100px, 0px) scale(0.5,0.5);
+    }
 }

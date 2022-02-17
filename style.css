@@ -32,6 +32,61 @@
     
 }
 
+
+.light {
+    position: absolute;
+    width:15px;
+    height:15px;
+    bottom:121.6%;
+    right:167.1%;
+    background-color:red;
+    color:red;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/* Blurr effect for light created with a red box shadow
+ * on a circular, filled in border.
+ * Flickering is done with a box shadow animation where each
+ * "layer" is incremented in size by a few pixls and shifted to
+ * a lighter color. Offset (0 0) is set to 0 so everything appears in center 
+ * or behind the object. Taken pretty much directly from
+ * https://www.w3schools.com/howto/howto_css_glowing_text.asp
+*/
+
+.shine {
+  font-size: 60px;
+  color: #e60073;
+  text-align: center;
+  animation: shine 1s ease-in-out infinite alternate;
+  z-index: 5;
+}
+
+
+@keyframes shine {
+    from {
+        box-shadow: 
+            0 0 10px #e60073, 
+            0 0 20px #fff, 
+            0 0 30px #e60073, 
+            0 0 40px #e60073, 
+            0 0 50px #e60073, 
+            0 0 60px #e60073, 
+            0 0 70px #e60073;
+    }
+
+    to {
+        box-shadow: 
+            0 0 20px #ff4da6, 
+            0 0 30px #ff4da6, 
+            0 0 40px #ff4da6, 
+            0 0 50px #ff4da6, 
+            0 0 60px #ff4da6, 
+            0 0 70px #ff4da6, 
+            0 0 80px #ff4da6;
+    } 
+}
+
 /* Minor adjustment for size of audio controll box. */
 audio {
     width: 270px;

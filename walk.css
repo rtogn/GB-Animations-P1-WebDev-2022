@@ -78,6 +78,38 @@
     animation-iteration-count: infinite;
 }
 
+#GameboyWalking {
+    position: absolute;
+    right: 23%;
+    bottom: -135%;
+    transform: scale(1.38,1.27);
+    z-index: 3;
+}
+
+#GameboyWalking :hover {
+    opacity: 0;
+}
+
+.lightWalk {
+    position: absolute;
+    width:15px;
+    height:15px;
+    bottom:127.2%;
+    right:165.9%;
+    background-color:red;
+    color:red;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.shineWalk {
+    font-size: 60px;
+    color: #e60073;
+    text-align: center;
+    animation: shine 1s ease-in-out infinite alternate;
+    z-index: 5;
+  }
+
 @keyframes walkDL {
     0% {opacity: 0}
     50% {opacity: 0}

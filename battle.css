@@ -222,6 +222,41 @@ div#block {
     left: 30%;
 }
 
+#gameboy {
+    position: absolute;
+    right: -27%;
+    bottom: -47%;
+    transform: scale(1.38,1.27);
+    z-index: 0;
+}
+
+#gameboyRight {
+    position: absolute;
+    right: -37.2%;
+    bottom: -18.6%;
+    transform: scale(1.38,1.27);
+    z-index: 1;
+}
+
+.light {
+    position: absolute;
+    width:15px;
+    height:15px;
+    bottom:64.5%;
+    right:116%;
+    background-color:red;
+    color:red;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.shine {
+    font-size: 60px;
+    color: #e60073;
+    text-align: center;
+    animation: shine 1s ease-in-out infinite alternate;
+    z-index: 5;
+  }
 
 #logoR:active ~ #nido .nidorino, #logoR:active + #gengar .gengar, #logoR:active {
     animation-name: screenswitch;

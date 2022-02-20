@@ -222,6 +222,14 @@ div#block {
     left: 30%;
 }
 
+
+#logoR:active ~ #nido .nidorino, #logoR:active + #gengar .gengar, #logoR:active {
+    animation-name: screenswitch;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 #gameboy {
     position: absolute;
     right: -27%;

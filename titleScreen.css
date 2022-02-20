@@ -116,15 +116,15 @@
  */
 #copyright {
     position: relative;
-    right: 48%;
-    bottom: 42%;
-    font-size: 14pt;
+    right: 36%;
+    bottom: 41%;
+    font-size: 12pt;
     letter-spacing: -2px;
     word-spacing: -2px;
 }
 
 #spaceFix {
-    letter-spacing: -6px;
+    letter-spacing: -5px;
 }
 
 /*

@@ -117,3 +117,8 @@
     75% {opacity: 1}
     100% {opacity: 1}
 }
+
+#screen {
+    bottom: 32.4%;
+}
+

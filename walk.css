@@ -118,7 +118,12 @@
     100% {opacity: 1}
 }
 
-#screen {
-    bottom: 32.4%;
+#screenHotfix {
+    position: fixed;
+    background-color: #e8e8e8;
+    height: 350px;
+    width: 400px;
+    left: 30%;
+    bottom: 31.1%;
 }
 

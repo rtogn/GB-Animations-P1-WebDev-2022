@@ -222,28 +222,10 @@
 }
 
 
-/* Black boxes used to hide the stack of images on the 
- * left and right side of the screen. 
- * Set opacity to 0 to view how animations work, or set
- * color to red to view where the boxes sit. 
- */
-.box {
-    position: fixed;
-    background-color: red;
-    opacity: 1;
-    bottom: 10%;
-    height: 400px;  
-    z-index: 2;
-}
-
-#boxL {
-    position: fixed;
-    left: 18.3%;
-    width: 150px;    
-}
-
-#boxR {
-    position: fixed;
-    left: 61.2%;
-     width: 400px;
+#dummy {
+    position: absolute;
+    background-color: aqua;
+    top: -13%;
+    right: 55%:
+    z-index:999;
 }

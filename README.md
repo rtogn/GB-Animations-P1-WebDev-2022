@@ -4,6 +4,8 @@ The purpose of this project was to demonstrate skills in CSS animation. The proj
 with pure CSS animations. No JS or other scripting language is used.  
 Copyright for all characters and music goes to Game Freak Inc and Nintendo.
 
+Original video for comparison: https://www.youtube.com/watch?v=C19O5xm51dk
+
 # Languages Used
 * HTML
 * CSS
